@@ -5,6 +5,8 @@ import { PhonologicalTraining } from './PhonologicalTraining'
 import { SpeedTraining } from './SpeedTraining'
 import { ProgressDashboard } from './ProgressDashboard'
 import { ThemeCustomizer } from './ThemeCustomizer'
+import { SpellingGame } from './SpellingGame'
+import { VisualDyslexia } from './VisualDyslexia'
 
 const DashboardContainer = styled.div`
   display: flex;
@@ -307,7 +309,7 @@ const WelcomeText = styled.p`
   }
 `
 
-type View = 'home' | 'training' | 'speed' | 'progress' | 'settings'
+type View = 'home' | 'training' | 'speed' | 'progress' | 'games' | 'visual-dyslexia' | 'settings'
 
 export const Dashboard: React.FC = () => {
   const { user, logout } = useAuth()
@@ -330,6 +332,8 @@ export const Dashboard: React.FC = () => {
       case 'training': return 'Phonological Training'
       case 'speed': return 'Speed Training'
       case 'progress': return 'My Progress'
+      case 'games': return 'Spelling Game'
+      case 'visual-dyslexia': return 'Visual Dyslexia'
       case 'settings': return 'Settings'
       default: return 'Dashboard'
     }
@@ -397,6 +401,26 @@ export const Dashboard: React.FC = () => {
           >
             <span role="img" aria-label="Chart icon">📊</span>
             <span>My Progress</span>
+          </NavItem>
+
+          <NavItem
+            active={currentView === 'games'}
+            collapsed={false}
+            onClick={() => handleNavClick('games')}
+            aria-label="Games"
+          >
+            <span role="img" aria-label="Game icon">🎮</span>
+            <span>Games</span>
+          </NavItem>
+
+          <NavItem
+            active={currentView === 'visual-dyslexia'}
+            collapsed={false}
+            onClick={() => handleNavClick('visual-dyslexia')}
+            aria-label="Visual Dyslexia"
+          >
+            <span role="img" aria-label="Eye icon">👁️</span>
+            <span>Visual Dyslexia</span>
           </NavItem>
 
           <NavItem
@@ -471,6 +495,10 @@ export const Dashboard: React.FC = () => {
           {currentView === 'speed' && <SpeedTraining />}
 
           {currentView === 'progress' && <ProgressDashboard />}
+
+          {currentView === 'games' && <SpellingGame />}
+
+          {currentView === 'visual-dyslexia' && <VisualDyslexia userId={user.id} />}
 
           {currentView === 'settings' && <ThemeCustomizer userId={user.id} />}
         </ContentArea>

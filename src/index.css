@@ -1,0 +1,313 @@
+:root {
+  /* Dyslexia-optimized theme variables */
+  --font-family: "OpenDyslexic", "Lexend", "Verdana", "Tahoma", "Arial", sans-serif;
+  --letter-spacing: 0.12em; /* 35% of average letter width */
+  --word-spacing: 0.16em;
+  --line-height: 1.5; /* 150% for optimal readability */
+  
+  /* Reduced visual stress colors - avoid pure black/white */
+  --bg-color: #FFFDD0; /* Cream background to reduce dazzle */
+  --bg-secondary: #F5F5DC; /* Beige for cards */
+  --color-overlay: none;
+
+  /* Preview variables (used during preview mode) */
+  --preview-font-family: var(--font-family);
+  --preview-letter-spacing: var(--letter-spacing);
+  --preview-word-spacing: var(--word-spacing);
+  --preview-line-height: var(--line-height);
+  --preview-bg-color: var(--bg-color);
+  --preview-color-overlay: var(--color-overlay);
+
+  /* Text colors - dark grey instead of pure black */
+  --text-primary: #333333; /* Dark charcoal, not pure black */
+  --text-secondary: #555555; /* Medium grey */
+  --text-success: #2D7A4F; /* Darker green for better contrast */
+  --text-error: #C33C3C; /* Darker red for better contrast */
+
+  /* UI colors with sufficient contrast */
+  --border-color: #CCCCCC;
+  --button-primary: #5568D3;
+  --button-hover: #4557B8;
+  
+  /* Spacing constants */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  letter-spacing: var(--letter-spacing);
+  word-spacing: var(--word-spacing);
+  line-height: var(--line-height);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  filter: var(--color-overlay);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Always left-aligned to prevent "river" effect */
+  text-align: left;
+}
+
+/* Preview mode styling */
+body.preview-mode {
+  font-family: var(--preview-font-family);
+  letter-spacing: var(--preview-letter-spacing);
+  word-spacing: var(--preview-word-spacing);
+  line-height: var(--preview-line-height);
+  background-color: var(--preview-bg-color);
+  filter: var(--preview-color-overlay);
+}
+
+/* Typography rules for dyslexia */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* Bold for emphasis, never italic */
+  line-height: 1.4;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: 0.05em;
+}
+
+p {
+  max-width: 65ch; /* Limit line length to 45-65 characters */
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Never use italics or underlines */
+em, i {
+  font-style: normal;
+  font-weight: 700; /* Use bold instead of italic */
+}
+
+u {
+  text-decoration: none;
+  font-weight: 700; /* Use bold instead of underline */
+}
+
+/* Never use all-caps */
+.uppercase {
+  text-transform: none !important;
+}
+
+/* Buttons with icon + label pattern */
+button {
+  font-family: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  line-height: inherit;
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button-primary);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  
+  /* Ensure buttons have good contrast */
+  min-height: 44px; /* Touch target size */
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--button-primary);
+  outline-offset: 3px;
+}
+
+/* Input styles with clear labels */
+input, select, textarea {
+  font-family: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  line-height: inherit;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  background-color: white;
+  color: var(--text-primary);
+  font-size: 1rem;
+  min-height: 44px; /* Touch target size */
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--button-primary);
+  box-shadow: 0 0 0 3px rgba(85, 104, 211, 0.1);
+}
+
+/* Error states with icon + color + text */
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-error);
+  font-weight: 600;
+  padding: var(--spacing-sm);
+  background: #FEE;
+  border: 2px solid var(--text-error);
+  border-radius: 6px;
+}
+
+.error-message::before {
+  content: "⚠️";
+  font-size: 1.2rem;
+}
+
+/* Success states with icon + color + text */
+.success-message {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-success);
+  font-weight: 600;
+  padding: var(--spacing-sm);
+  background: #EFE;
+  border: 2px solid var(--text-success);
+  border-radius: 6px;
+}
+
+.success-message::before {
+  content: "✓";
+  font-size: 1.2rem;
+}
+
+/* Ensure minimal animations to avoid distraction */
+* {
+  animation-duration: 0s !important;
+  transition-duration: 0.2s !important;
+}
+
+/* Accessibility - enhanced focus indicators */
+:focus-visible {
+  outline: 3px solid var(--button-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scrollbar styling for reduced visual stress */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5DC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 6px;
+  border: 2px solid #F5F5DC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AAAAAA;
+}
+
+/* Links with clear visual distinction */
+a {
+  color: var(--button-primary);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+a:hover {
+  border-bottom-color: var(--button-primary);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--button-primary);
+  outline-offset: 3px;
+}
+
+/* Lists with proper spacing */
+ul, ol {
+  padding-left: 2rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Tables with clear structure */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+}
+
+th, td {
+  padding: var(--spacing-sm);
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  font-weight: 700;
+  background: var(--bg-secondary);
+}
+
+/* Card components with soft shadows */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--button-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}

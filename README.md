@@ -167,16 +167,51 @@ Comprehensive test coverage using property-based testing to ensure correctness:
 ## 👥 Team
 
 ### Project Maintainer
-- **Zoefisha Khan**
-  - GitHub: [@khanzoefisha](https://github.com/khanzoefisha)
-  - Email: khanzoefisha.122@gmail.com
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/khanzoefisha">
+        <img src="https://github.com/khanzoefisha.png" width="100px;" alt="Zoefisha Khan"/>
+        <br />
+        <sub><b>Zoefisha Khan</b></sub>
+      </a>
+      <br />
+      <sub>Project Lead</sub>
+      <br />
+      <a href="mailto:khanzoefisha.122@gmail.com">📧 Email</a>
+    </td>
+  </tr>
+</table>
 
 ### Collaborators
-- **Mariyam Usmani**
-  - Email: usmanimariyam2931@gmail.com
 
-- **Rukaiya Ghadiali**
-  - Email: rukaiyaghadiali14@gmail.com
+<table>
+  <tr>
+    <td align="center">
+      <a href="mailto:usmanimariyam2931@gmail.com">
+        <img src="https://ui-avatars.com/api/?name=Mariyam+Usmani&background=667eea&color=fff&size=100" width="100px;" alt="Mariyam Usmani"/>
+        <br />
+        <sub><b>Mariyam Usmani</b></sub>
+      </a>
+      <br />
+      <sub>Developer</sub>
+      <br />
+      <a href="mailto:usmanimariyam2931@gmail.com">📧 Email</a>
+    </td>
+    <td align="center">
+      <a href="mailto:rukaiyaghadiali14@gmail.com">
+        <img src="https://ui-avatars.com/api/?name=Rukaiya+Ghadiali&background=764ba2&color=fff&size=100" width="100px;" alt="Rukaiya Ghadiali"/>
+        <br />
+        <sub><b>Rukaiya Ghadiali</b></sub>
+      </a>
+      <br />
+      <sub>Developer</sub>
+      <br />
+      <a href="mailto:rukaiyaghadiali14@gmail.com">📧 Email</a>
+    </td>
+  </tr>
+</table>
 
 ## 🤝 Contributing
 

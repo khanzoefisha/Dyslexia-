@@ -172,7 +172,7 @@ Comprehensive test coverage using property-based testing to ensure correctness:
   <tr>
     <td align="center">
       <a href="https://github.com/khanzoefisha">
-        <img src="https://github.com/khanzoefisha.png" width="100px;" alt="Zoefisha Khan"/>
+        <img src="https://ui-avatars.com/api/?name=Zoefisha+Khan&background=4CAF50&color=fff&size=100&bold=true" width="100px;" alt="Zoefisha Khan"/>
         <br />
         <sub><b>Zoefisha Khan</b></sub>
       </a>

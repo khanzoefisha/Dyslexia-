@@ -177,9 +177,9 @@ Comprehensive test coverage using property-based testing to ensure correctness:
         <sub><b>Zoefisha Khan</b></sub>
       </a>
       <br />
-      <sub>Project Lead</sub>
+      <sub>Project Lead & Maintainer</sub>
       <br />
-      <a href="mailto:khanzoefisha.122@gmail.com">📧 Email</a>
+      📧 <a href="mailto:khanzoefisha.122@gmail.com">khanzoefisha.122@gmail.com</a>
     </td>
   </tr>
 </table>
@@ -189,26 +189,22 @@ Comprehensive test coverage using property-based testing to ensure correctness:
 <table>
   <tr>
     <td align="center">
-      <a href="mailto:usmanimariyam2931@gmail.com">
-        <img src="https://ui-avatars.com/api/?name=Mariyam+Usmani&background=667eea&color=fff&size=100" width="100px;" alt="Mariyam Usmani"/>
-        <br />
-        <sub><b>Mariyam Usmani</b></sub>
-      </a>
+      <img src="https://ui-avatars.com/api/?name=Mariyam+Usmani&background=667eea&color=fff&size=100&bold=true" width="100px;" alt="Mariyam Usmani"/>
+      <br />
+      <sub><b>Mariyam Usmani</b></sub>
       <br />
       <sub>Developer</sub>
       <br />
-      <a href="mailto:usmanimariyam2931@gmail.com">📧 Email</a>
+      📧 <a href="mailto:usmanimariyam2931@gmail.com">usmanimariyam2931@gmail.com</a>
     </td>
     <td align="center">
-      <a href="mailto:rukaiyaghadiali14@gmail.com">
-        <img src="https://ui-avatars.com/api/?name=Rukaiya+Ghadiali&background=764ba2&color=fff&size=100" width="100px;" alt="Rukaiya Ghadiali"/>
-        <br />
-        <sub><b>Rukaiya Ghadiali</b></sub>
-      </a>
+      <img src="https://ui-avatars.com/api/?name=Rukaiya+Ghadiali&background=764ba2&color=fff&size=100&bold=true" width="100px;" alt="Rukaiya Ghadiali"/>
+      <br />
+      <sub><b>Rukaiya Ghadiali</b></sub>
       <br />
       <sub>Developer</sub>
       <br />
-      <a href="mailto:rukaiyaghadiali14@gmail.com">📧 Email</a>
+      📧 <a href="mailto:rukaiyaghadiali14@gmail.com">rukaiyaghadiali14@gmail.com</a>
     </td>
   </tr>
 </table>
